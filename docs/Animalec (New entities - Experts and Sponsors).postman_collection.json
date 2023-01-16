@@ -1,0 +1,293 @@
+{
+	"info": {
+		"_postman_id": "e0a41eb9-0941-45b5-aa21-e64b0ca98627",
+		"name": "Animalec (New entities - Experts and Sponsors)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1881489"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"admin\",\n    \"password\":\"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sponsors - List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwayI6InA0dXVycGc0NnI2MzZmYzYxNjkwZjVkZDAwMDRjN2RiNTciLCJpYXQiOjE2NzM4Nzc5NzEsImV4cCI6MTY3Mzg5Mjk3MSwiaXNzIjoiRkNBIn0.Ri8uZ1wf9Miu_6v-Zi6XxGJQZKr7KtgLowmOGMNiiN0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/sponsors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sponsors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sponsors - Add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwayI6InA0dXVycGc0NnI2MzZmYzYxNjkwZjVkZDAwMDRjN2RiNTciLCJpYXQiOjE2NzM4NzgzNTMsImV4cCI6MTY3Mzg5MzM1MywiaXNzIjoiRkNBIn0.LyA8NgGP3a3iThWCRj7TghPumP4ybdLo1HZNOqbL_Ow",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Daniela\",\n    \"animal\": \"sapo\",\n    \"message\": \"I just love frogs.\",\n    \"sortType\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/sponsors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sponsors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sponsors - Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwayI6InA0dXVycGc0NnI2MzZmYzYxNjkwZjVkZDAwMDRjN2RiNTciLCJpYXQiOjE2NzM4NzgzNTMsImV4cCI6MTY3Mzg5MzM1MywiaXNzIjoiRkNBIn0.LyA8NgGP3a3iThWCRj7TghPumP4ybdLo1HZNOqbL_Ow",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Daniela\",\n    \"animal\": \"sapo\",\n    \"message\": \"I just love frogs.\",\n    \"sortType\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/sponsors/63c55aa224cbe9f194704c48",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sponsors",
+						"63c55aa224cbe9f194704c48"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sponsors - Modify",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwayI6InA0dXVycGc0NnI2MzZmYzYxNjkwZjVkZDAwMDRjN2RiNTciLCJpYXQiOjE2NzM4NzgzNTMsImV4cCI6MTY3Mzg5MzM1MywiaXNzIjoiRkNBIn0.LyA8NgGP3a3iThWCRj7TghPumP4ybdLo1HZNOqbL_Ow",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Daniela\",\n    \"animal\": \"sapo\",\n    \"message\": \"I just love all the frogs.\",\n    \"sortType\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/sponsors/63c55d5524cbe9f194704c4b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sponsors",
+						"63c55d5524cbe9f194704c4b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Experts - List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwayI6InA0dXVycGc0NnI2MzZmYzYxNjkwZjVkZDAwMDRjN2RiNTciLCJpYXQiOjE2NzM4Nzc5NzEsImV4cCI6MTY3Mzg5Mjk3MSwiaXNzIjoiRkNBIn0.Ri8uZ1wf9Miu_6v-Zi6XxGJQZKr7KtgLowmOGMNiiN0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/experts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"experts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Experts - Add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwayI6InA0dXVycGc0NnI2MzZmYzYxNjkwZjVkZDAwMDRjN2RiNTciLCJpYXQiOjE2NzM4Nzc5NzEsImV4cCI6MTY3Mzg5Mjk3MSwiaXNzIjoiRkNBIn0.Ri8uZ1wf9Miu_6v-Zi6XxGJQZKr7KtgLowmOGMNiiN0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Dr. Cardoso\",\n    \"group\": \"anfibio\",\n    \"description\": \"Os anfibios são os animais mais inteligentes. \"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/experts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"experts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Experts - Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwayI6InA0dXVycGc0NnI2MzZmYzYxNjkwZjVkZDAwMDRjN2RiNTciLCJpYXQiOjE2NzM4Nzc5NzEsImV4cCI6MTY3Mzg5Mjk3MSwiaXNzIjoiRkNBIn0.Ri8uZ1wf9Miu_6v-Zi6XxGJQZKr7KtgLowmOGMNiiN0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/experts/63c55f4924cbe9f194704c4d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"experts",
+						"63c55f4924cbe9f194704c4d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Experts - Modify",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwayI6InA0dXVycGc0NnI2MzZmYzYxNjkwZjVkZDAwMDRjN2RiNTciLCJpYXQiOjE2NzM4Nzc5NzEsImV4cCI6MTY3Mzg5Mjk3MSwiaXNzIjoiRkNBIn0.Ri8uZ1wf9Miu_6v-Zi6XxGJQZKr7KtgLowmOGMNiiN0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Dr. Cardoso\",\n    \"group\": \"anfibio\",\n    \"description\": \"Os anfibios são os animais mais inteligentes e complexos da natureza.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/experts/63c55f6f24cbe9f194704c4e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"experts",
+						"63c55f6f24cbe9f194704c4e"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwayI6InA0dXVycGc0NnI2MzZmYzYxNjkwZjVkZDAwMDRjN2RiNTciLCJpYXQiOjE2NjkyMjk3ODAsImV4cCI6MTY2OTI0NDc4MCwiaXNzIjoiRkNBIn0.6YINu1QjAnz9WmpscHOWNV_T_Uj_feWrVJie_KRYSes"
+		}
+	]
+}
